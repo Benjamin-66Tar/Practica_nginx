@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Servidor 8080 - /data/up1</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background-color: #1e293b;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            max-width: 500px;
+            text-align: center;
+            border: 1px solid #334155;
+        }
+        h1 { color: #38bdf8; margin-top: 0; }
+        code { background: #0f172a; padding: 4px 8px; border-radius: 4px; color: #a5f3fc; }
+        .tag {
+            display: inline-block;
+            background: #0284c7;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <span class="tag">Nginx Beginner's Guide</span>
+        <h1>¡Hola desde /data/up1!</h1>
+        <p>Este archivo está siendo servido por el bloque:</p>
+        <p><code>listen 8080; root /data/up1;</code></p>
+        <p>Si entraste a través de <code>http://localhost/</code> (puerto 80), el proxy te envió aquí automáticamente mediante <code>proxy_pass http://localhost:8080;</code>.</p>
+    </div>
+</body>
+</html>
