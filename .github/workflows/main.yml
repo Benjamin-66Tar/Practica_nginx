@@ -19,7 +19,7 @@ jobs:
 
       - name: Validar sintaxis de nginx.conf
         run: |
-          docker run --rm -v ${{ github.workspace }}/nginx.conf:/etc/nginx/nginx.conf:ro -v ${{ github.workspace }}/data:/data:ro nginx:alpine nginx -t
+          docker run --rm --add-host=host.docker.internal:127.0.0.1 -v ${{ github.workspace }}/nginx.conf:/etc/nginx/nginx.conf:ro -v ${{ github.workspace }}/data:/data:ro nginx:alpine nginx -t
 
       - name: Setup Python
         uses: actions/setup-python@v5
